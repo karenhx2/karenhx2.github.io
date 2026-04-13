@@ -9,7 +9,9 @@
     <title>My Chart View</title>
   </head>
   <body>
-    <a href="https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_data/main/building_inventory.csv">Link to Dataset (Building Inventory)</a>
+    <div>
+      <a href="https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_data/main/building_inventory.csv">Link to Dataset (Building Inventory)</a>
+    </div>
     <!-- <div id="carsviz"></div> -->
     <div id='vis'></div>
 
@@ -37,6 +39,6 @@
       itself (i.e., we can only estimate the values for each bar, so having tooltips provides more specificity for such values).
   </body>
   <script>
-    vegaEmbed("#vis", "chart1.json");
+    vegaEmbed("#vis", "chart1.vg");
   </script>
 </html>

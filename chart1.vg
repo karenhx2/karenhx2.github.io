@@ -1,0 +1,66 @@
+{
+  "config": {"view": {"continuousWidth": 300, "continuousHeight": 300}},
+  "data": {"name": "data-54d42bb8e3e8c13850c31c2f0b4754e6"},
+  "mark": {"type": "bar"},
+  "encoding": {
+    "color": {"field": "Agency Name", "type": "nominal"},
+    "tooltip": [
+      {"field": "Agency Name", "type": "nominal"},
+      {"field": "city_count", "type": "quantitative"}
+    ],
+    "x": {"field": "Agency Name", "type": "nominal"},
+    "y": {"field": "city_count", "type": "quantitative"}
+  },
+  "params": [
+    {
+      "name": "param_31",
+      "select": {"type": "interval", "encodings": ["x", "y"]},
+      "bind": "scales"
+    }
+  ],
+  "transform": [{"filter": "(datum.city_count >= 10)"}],
+  "width": "container",
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json",
+  "datasets": {
+    "data-54d42bb8e3e8c13850c31c2f0b4754e6": [
+      {"Agency Name": "Appellate Court / Fifth District", "city_count": 1},
+      {"Agency Name": "Appellate Court / Fourth District", "city_count": 1},
+      {"Agency Name": "Appellate Court / Second District", "city_count": 1},
+      {"Agency Name": "Appellate Court / Third District", "city_count": 1},
+      {"Agency Name": "Chicago State University", "city_count": 1},
+      {"Agency Name": "Department of Agriculture", "city_count": 5},
+      {
+        "Agency Name": "Department of Central Management Services",
+        "city_count": 20
+      },
+      {"Agency Name": "Department of Corrections", "city_count": 34},
+      {"Agency Name": "Department of Human Services", "city_count": 21},
+      {"Agency Name": "Department of Juvenile Justice", "city_count": 6},
+      {"Agency Name": "Department of Military Affairs", "city_count": 48},
+      {"Agency Name": "Department of Natural Resources", "city_count": 132},
+      {"Agency Name": "Department of Public Health", "city_count": 1},
+      {"Agency Name": "Department of Revenue", "city_count": 1},
+      {"Agency Name": "Department of State Police", "city_count": 32},
+      {"Agency Name": "Department of Transportation", "city_count": 248},
+      {"Agency Name": "Department of Veterans' Affairs", "city_count": 6},
+      {"Agency Name": "Eastern Illinois University", "city_count": 1},
+      {"Agency Name": "Governor's Office", "city_count": 1},
+      {"Agency Name": "Governors State University", "city_count": 1},
+      {"Agency Name": "Historic Preservation Agency", "city_count": 33},
+      {"Agency Name": "IL State Board of Education", "city_count": 1},
+      {"Agency Name": "Illinois Board of Higher Education", "city_count": 1},
+      {"Agency Name": "Illinois Community College Board", "city_count": 6},
+      {"Agency Name": "Illinois Courts", "city_count": 1},
+      {"Agency Name": "Illinois Emergency Management Agency", "city_count": 2},
+      {"Agency Name": "Illinois Medical District Commission", "city_count": 1},
+      {"Agency Name": "Illinois State University", "city_count": 1},
+      {"Agency Name": "Northeastern Illinois University", "city_count": 1},
+      {"Agency Name": "Northern Illinois University", "city_count": 3},
+      {"Agency Name": "Office of the Attorney General", "city_count": 1},
+      {"Agency Name": "Office of the Secretary of State", "city_count": 2},
+      {"Agency Name": "Southern Illinois University", "city_count": 11},
+      {"Agency Name": "University of Illinois", "city_count": 16},
+      {"Agency Name": "Western Illinois University", "city_count": 2}
+    ]
+  }
+}
