@@ -13,17 +13,27 @@
     <!-- <div id="carsviz"></div> -->
     <div id='vis'></div>
 
-    <!-- <script type="text/javascript">
-    vegaEmbed("#carsviz", "assets/json/cars.json") -->
-    <!-- </script> -->
-    <script type="text/javascript">
-    var spec = 'https://raw.githubusercontent.com/karenhx2/karenhx2.github.io/refs/heads/main/assets/json/cars.json';
-    var options = {"renderer": "canvas"};
-    vegaEmbed('#vis', spec, options)
-    //     .then(function (result) {
-    //       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-    //     })
-    //     .catch(console.error);
-    </script>
-  </body>
+    <p>In this first plot, I am visualizing the unique number of cities in which each agency owns buildings.
+      This allows us to examine the spread (locationw-wise) of building ownership across each of the different 
+      agencies described in the given building inventory dataset. The visualization is important in better 
+      understanding which agencies own more buildings across more cities in the US, providing insights into their 
+      respective influences nationally. In terms of encoding types, the x-axis is the agency name and is represented 
+      as nominal data, while the y-axis is the number of distinct cities and is represented as quantitative data. 
+      These encoding choices were made because the different agencies are discrete yet unordered values, and the city count 
+      is best represented as a number value. Since there was one nominal and one quantitative field being depicted, I chose 
+      to use a bar chart, with each bar representing one agency and the height of the bar representing the distinct city 
+      count of that agency. Regarding the color scheme, I chose to color based on the agency name (i.e., based on the bars) 
+      to create a clearer, more aesthetic visualization and to help with distinguishing the different agencies/bars. 
+      No specific color map/scheme was used since coloring of the bars was solely based on the name of the agency, not any 
+      other value/field from the dataset. Regarding data transformations, I first grouped the original dataset by 
+      the agency name, then I aggregated by the unique count of cities per agency name. Additionally, I did not set the agency 
+      name to be an index of this new dataframe because I wanted the agency name to remain as a separate column for subsequent 
+      use in building the altair bar chart. Upon creating the chart, I used a transform filter function such that only agencies with 
+      buildings in at least 10 distinct cities were included. This filter was used to remove the agencies that had none/only a few 
+      distinct cities and to prevent the chart from looking too cluttered (i.e., from having too many bars). Lastly, a bit of 
+      interactivity was incorporated via specifying the tooltips for the bars in the chart, along with the general pan/zoom functions. 
+      The tooltips reiterate the name of the agency that is depicted by each bar and notes the number of distinct cities for each bar. 
+      The city count is especially useful to include in the tooltips since these values are not directly specified in the bar chart 
+      itself (i.e., we can only estimate the values for each bar, so having tooltips provides more specificity for such values).
+  </script>
 </html>
