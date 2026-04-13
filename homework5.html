@@ -3,16 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Homework 5</title>
+    <script src="https://cdn.jsdelivr.net/npm/vega@6.2.0/build/vega.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@6.4.2/build/vega-lite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@7.1.0/build/vega-embed.min.js"></script>
+    <title>My Chart View</title>
   </head>
   <body>
     <!-- <a href="https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_data/main/building_inventory.csv">Link to Dataset (Building Inventory)</a> -->
-    <div id="carsviz"></div>
+    <!-- <div id="carsviz"></div> -->
+    <div id="vis"></div>
+
+    <!-- <script type="text/javascript">
+    vegaEmbed("#carsviz", "assets/json/cars.json") -->
+    <!-- </script> -->
+    <script type="text/javascript">
+    var spec = 'https://raw.githubusercontent.com/vega/vega/master/docs/examples/bar-chart.vg.json';
+    vegaEmbed('#vis', spec)
+    //     .then(function (result) {
+    //       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    //     })
+    //     .catch(console.error);
+    </script>
   </body>
-  <script src="https://cdn.jsdelivr.net/npm/vega@6.2.0/build/vega.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega-lite@6.4.2/build/vega-lite.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega-embed@7.1.0/build/vega-embed.min.js"></script>
-  <script>
-    vegaEmbed("#carsviz", "assets/json/cars.json")
-  </script>
 </html>
