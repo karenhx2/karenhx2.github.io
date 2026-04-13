@@ -18,7 +18,8 @@
     <!-- </script> -->
     <script type="text/javascript">
     var spec = 'https://raw.githubusercontent.com/karenhx2/karenhx2.github.io/refs/heads/main/assets/json/cars.json';
-    vegaEmbed('#vis', spec)
+    var options = {"renderer": "canvas"};
+    vegaEmbed('#vis', spec, options)
     //     .then(function (result) {
     //       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     //     })
