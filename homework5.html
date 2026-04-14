@@ -6,7 +6,7 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
-    <title>My Chart View</title>
+    <title>Homework 5</title>
   </head>
   <body>
     <div>
@@ -21,7 +21,7 @@
     <div id='vis1'></div>
 
     <p>In this first plot, I am visualizing the unique number of cities in which each agency owns buildings.
-      This allows us to examine the spread (locationw-wise) of building ownership across each of the different 
+      This allows us to examine the spread (location-wise) of building ownership across each of the different 
       agencies described in the given building inventory dataset. The visualization is important in better 
       understanding which agencies own more buildings across more cities in the US, providing insights into their 
       respective influences nationally. In terms of encoding types, the x-axis is the agency name and is represented 
@@ -48,7 +48,29 @@
 
       <div id='vis2', style="width:auto;"></div>
 
-      <p>Description for plot 2 here</p>
+      <p>The second plot depicts the average square footage of the buildings for each year of construction and for different 
+        building usage purposes. This visualization is useful for understanding and comparing the trends in general square footage 
+        over time (i.e., general rates of building construction) across each usage type, allowing us to see which types of buildings 
+        saw more construction in given years. For the chart's encoding types, the x-field is the year of construction and is represented 
+        as temporal data (since year is a form of time), while the y-field is the average square footage and is represented as quantitative 
+        data (since this is a numerical value). For the x-axis, I chose to set the scale's zero parameter to False to allow the plot to 
+        more specifically "zoom in" on the years that actually displayed data for a given usage description, since I had noticed that several 
+        usage descriptions did not have data for certain years.
+        A line chart was chosen to most clearly depict trends in the average square footage 
+        over a period of time. In terms of coloring variables/color schemes, I chose not to use one because the visualization is already separated by 
+        usage description, and so color is not needed to distinguish between different lines. In other words, the data is clear, even without the use 
+        of color, and so adding a coloring variable would unnecessarily result in a distracting chart. Minimal data transformations were 
+        needed for this plot - I simply chose to exclude entries in the dataset that had a usage description of either "Public" or "Not provided" because, 
+        upon examining the chart for those descriptions, I found that there were no significant linear trends (i.e., the plot was blank) for those. 
+        Interactivity was incorporated by the inclusion of a drop-down menu that allows users to select the usage description they wish to see in the plot. 
+        Options for the drop-down menu included all of the unique usages found in the dataset, excluding "Public" and "Not provided" (for the previously 
+        stated reasons), and the default value was set to "Assembly". Upon selection of a usage description, the chart would update (via a transform 
+        filter function) to filter the data, only including rows from the dataset that have the selected usage description in the "Usage Description" field. 
+        I specifically chose this interactive feature because simply displaying all of the lines for all of the usage descriptions would create a messy 
+        appearance, even if I had colored the lines by usage description. Separating the lines for each usage description creates a much clearer visualization 
+        and allows users to look at different usages one by one. This also makes the visualization more interesting and dynamic for viewers, allowing for easy 
+        navigation between different line charts. Additionally, I kept the standard pan/zoom interactivity so that users can hone in on specific years that they 
+        are interested in. </p>
 
   </body>
   <script>
